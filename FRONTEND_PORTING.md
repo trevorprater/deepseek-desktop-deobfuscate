@@ -1,5 +1,7 @@
 # Porting the frontend to another JSON-RPC harness
 
+If the goal is to reuse the visual design without inheriting the original runtime architecture, start with [`ui-reference/`](ui-reference/) and its [`HANDOFF.md`](ui-reference/HANDOFF.md). It is a flattened, backend-free React implementation of the shell and core states described below. Use this document when you need to trace a reference component back to the complete vendored source or preserve more of the original plugin graph.
+
 ## What is included
 
 The complete editable application source is vendored under `upstream-source/`. The frontend is not just `apps/web`: it is a Cordis client plugin graph assembled from the Web shell plus packages under `packages/client`, browser halves under other package groups, shared protocol packages, and the desktop carrier.
