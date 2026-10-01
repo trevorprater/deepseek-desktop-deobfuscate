@@ -6,8 +6,8 @@ Port the standalone visual reference in this directory into our existing JSON-RP
 
 ## Constraints
 
-- Do not add DeepSeek, Cordis, or vendored Harness runtime dependencies.
-- Do not embed or launch the original Harness backend.
+- Keep the frontend independent of any external agent runtime or provider SDK.
+- Connect it to our existing backend through its JSON-RPC interface.
 - Keep our existing JSON-RPC method names, authentication, lifecycle, and persistence ownership.
 - Treat `src/model.ts` as a UI-facing normalization boundary, not as a required wire protocol.
 - Preserve drafts, selected workspace, open side-panel tab, expanded tool rows, and pending decisions across route/state updates.
@@ -39,7 +39,7 @@ Port the standalone visual reference in this directory into our existing JSON-RP
 
 ## Acceptance criteria
 
-- The app renders without any DeepSeek network or package dependency.
+- The app renders without an external agent runtime or model-provider dependency.
 - Every visible action has a real accessible name.
 - Expandable rows expose `aria-expanded` and keep stable height in the collapsed state.
 - Running, success, error, canceled, and approval states are visually distinct.

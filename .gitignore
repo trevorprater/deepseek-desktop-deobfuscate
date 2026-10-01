@@ -1,13 +1,12 @@
 .DS_Store
 node_modules/
-.dsh-bridge-home/
 .local-source-worktrees/
 
-# Downloaded/captured third-party artifacts are reproducible but intentionally
-# excluded from ordinary Git history. The signed app and native payloads also
-# contain files above GitHub's per-file limit.
-original/distribution/
-original/site/
-deobfuscated/app-asar/
-deobfuscated/site/
+# Earlier research artifacts are retained locally.
+original/
+deobfuscated/
 ui-reference/screenshots/*-annotated.png
+
+# The runnable static reference is deliberately committed.
+!ui-reference/dist/
+!ui-reference/dist/**

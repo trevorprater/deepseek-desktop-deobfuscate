@@ -1,18 +1,16 @@
-# Agent Workbench UI Reference
+# Harness UI Reference
 
-This is a standalone, backend-free visual reference for an agent harness frontend. It intentionally does not import DeepSeek Harness, Cordis, the DeepSeek gateway, or any model/provider SDK.
+This is a standalone visual reference for an agent harness frontend. It uses React, local mock data, and plain CSS, with no model, provider, account, or backend connection.
 
 The goal is to give another coding agent a small, legible React application that demonstrates the target shell and every important agent state without requiring a backend.
 
 ![Running state](screenshots/running.png)
 
-Clone only this package:
+Clone and open the UI package:
 
 ```sh
-git clone --depth 1 --filter=blob:none --sparse \
-  https://github.com/trevorprater/deepseek-desktop-deobfuscate.git
-cd deepseek-desktop-deobfuscate
-git sparse-checkout set ui-reference
+git clone --depth 1 https://github.com/trevorprater/harness-ui-reference.git
+cd harness-ui-reference/ui-reference
 ```
 
 ## Run it
@@ -59,8 +57,10 @@ The reference models these normalized concepts:
 
 Do not copy mock timers or hard-code scenario switching into production. Replace `mockData.ts` with selectors over your adapter's normalized event store.
 
-## Visual source
+## Visual reference and attribution
 
-The geometry, density, surface hierarchy, token values, transcript rhythm, composer shape, and desktop shell proportions are based on the MIT-licensed source vendored in `../upstream-source/`. This standalone package has been flattened into ordinary React and CSS so it is understandable without the original runtime architecture.
+The application expresses its geometry, colors, typography, transcript rhythm, and composer layout in ordinary React and CSS. Screenshots cover the implemented reference states; they do not establish pixel-perfect equivalence to another application.
+
+Required attribution for the styling and bundled React runtime is retained in [THIRD_PARTY_NOTICES.txt](public/THIRD_PARTY_NOTICES.txt), which is also copied into the production build.
 
 See [HANDOFF.md](HANDOFF.md) for a copy-ready prompt and implementation acceptance criteria.

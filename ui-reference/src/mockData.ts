@@ -18,7 +18,7 @@ export const toolCalls: ToolCall[] = [
     status: 'success',
     duration: '42 ms',
     path: 'ui-reference/package.json',
-    output: '{\n  "name": "agent-workbench-ui-reference",\n  "scripts": { "build": "tsc --noEmit && vite build" }\n}',
+    output: '{\n  "name": "harness-ui-reference",\n  "scripts": { "build": "tsc --noEmit && vite build" }\n}',
   },
   {
     id: 'run-tests',
