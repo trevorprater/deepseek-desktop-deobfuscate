@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.dsh-bridge-home/
+
+# Downloaded/captured third-party artifacts are reproducible but intentionally
+# excluded from ordinary Git history. The signed app and native payloads also
+# contain files above GitHub's per-file limit.
+original/distribution/
+original/site/
+deobfuscated/app-asar/
+deobfuscated/site/

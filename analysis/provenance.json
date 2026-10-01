@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-01T15:38:30.502Z",
+  "pageUrl": "https://deepseek.com/harness/",
+  "source": {
+    "remote": "https://github.com/deepseek-ai/deepseek-harness.git",
+    "tag": "dsh-v0.2.0-rc.2",
+    "commit": "639ed015397290b3745d163aafe02ffee4aa3f84"
+  },
+  "distributionBuildCommit": "5e9e301",
+  "libreOfficeSource": {
+    "remote": "https://github.com/deepseek-ai/dsh-libreoffice-kit.git",
+    "commit": "226f1117b65407a0f4482a7f0e08bfc24b9d9b30"
+  },
+  "installerUrl": "https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg",
+  "updaterFeedUrl": "https://download.deepseek.com/dsh-desk/feeds/mac-arm64/nightly-mac.yml",
+  "dmg": {
+    "bytes": 369764183,
+    "sha256": "7c32c459c403d8a035ac60600f240ed2025312f0a7afde283f454f30ec4ed96e"
+  },
+  "updaterFeed": {
+    "bytes": 518,
+    "sha256": "bce390e487aadb44fa40ebf6990d3dcf1262e5553051b871eed74adba5cb24e4"
+  },
+  "appAsar": {
+    "bytes": 121387457,
+    "sha256": "18d5036bbb58eaff41d351ede99314b8d06505aec06fb2e164c49874ada30f9e"
+  },
+  "app": {
+    "version": "0.2.0-rc.2",
+    "buildVersion": "0.2.0-rc.2",
+    "bundleIdentifier": "com.deepseek.dsh",
+    "minimumSystemVersion": "13.0",
+    "electronAsarIntegrity": {
+      "Resources/app.asar": {
+        "hash": "a04848cb1f9cabbfa50c4ce2429721fae2e562f7de4f22dc5050b4fab1a83913",
+        "algorithm": "SHA256"
+      },
+      "Resources/default_app.asar": {
+        "hash": "553d6dd413d71a62ae1e67b1db59bd83fadf16ae529f015415dce85787ea437b",
+        "algorithm": "SHA256"
+      }
+    }
+  },
+  "signature": {
+    "Executable": "original/distribution/DeepSeek Harness.app/Contents/MacOS/DeepSeek Harness",
+    "Identifier": "com.deepseek.dsh",
+    "Format": "app bundle with Mach-O thin (arm64)",
+    "CodeDirectory v": "20500 size=444 flags=0x10000(runtime) hashes=3+7 location=embedded",
+    "VersionPlatform": "1",
+    "VersionMin": "851968",
+    "VersionSDK": "1705216",
+    "Hash type": "sha256 size=32",
+    "CandidateCDHash sha256": "949e9c484e7f1608a75bf1b2582b35de4eacabd5",
+    "CandidateCDHashFull sha256": "949e9c484e7f1608a75bf1b2582b35de4eacabd5a642debd3fbd9a1e3763b20c",
+    "Hash choices": "sha256",
+    "CMSDigest": "949e9c484e7f1608a75bf1b2582b35de4eacabd5a642debd3fbd9a1e3763b20c",
+    "CMSDigestType": "2",
+    "Executable Segment base": "0",
+    "Executable Segment limit": "16384",
+    "Executable Segment flags": "0x1",
+    "Page size": "16384",
+    "CDHash": "949e9c484e7f1608a75bf1b2582b35de4eacabd5",
+    "Signature size": "9051",
+    "authorities": [
+      "Developer ID Application: Hangzhou DeepSeek Artificial Intelligence Co., Ltd (NAN929V4UM)",
+      "Developer ID Certification Authority",
+      "Apple Root CA"
+    ],
+    "Timestamp": "Sep 29, 2026 at 05:55:26",
+    "Info.plist entries": "33",
+    "TeamIdentifier": "NAN929V4UM",
+    "Runtime Version": "26.5.0",
+    "Sealed Resources version": "2 rules=13 files=7971",
+    "Internal requirements count": "1 size=176",
+    "gatekeeperAccepted": true
+  }
+}

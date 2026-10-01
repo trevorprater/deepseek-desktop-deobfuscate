@@ -1,0 +1,5 @@
+7c32c459c403d8a035ac60600f240ed2025312f0a7afde283f454f30ec4ed96e  original/distribution/deepseek-harness-latest-macos-arm64.dmg
+bce390e487aadb44fa40ebf6990d3dcf1262e5553051b871eed74adba5cb24e4  original/distribution/nightly-mac.yml
+18d5036bbb58eaff41d351ede99314b8d06505aec06fb2e164c49874ada30f9e  original/distribution/DeepSeek Harness.app/Contents/Resources/app.asar
+10325004a1ddbd8118ed0607ea28d50a7b0d692dcaeb25a67a7d8aea9165019d  deobfuscated/app-asar/lib/main.js
+10325004a1ddbd8118ed0607ea28d50a7b0d692dcaeb25a67a7d8aea9165019d  upstream-source/apps/desktop/lib/main.js
