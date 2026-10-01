@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 .dsh-bridge-home/
+.local-source-worktrees/
 
 # Downloaded/captured third-party artifacts are reproducible but intentionally
 # excluded from ordinary Git history. The signed app and native payloads also

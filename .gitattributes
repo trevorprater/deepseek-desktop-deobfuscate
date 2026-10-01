@@ -3,3 +3,5 @@
 *.mjs text eol=lf
 *.sha256 text eol=lf
 *.csv text eol=lf
+frontend-build/** linguist-generated=true
+frontend-build/**/*.map -diff

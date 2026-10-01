@@ -2,7 +2,7 @@
 
 ## Result
 
-Use the readable source in `upstream-source/`, not the minified marketing page or the Electron renderer. DeepSeek publishes the complete Harness as an MIT-licensed Cordis plugin tree. The downloaded desktop release is version `0.2.0-rc.2`, and its shell/runtime has been mapped back to the public source with no unexplained first-party file differences; see `analysis/SUMMARY.md`.
+Use the readable, fully vendored source in `upstream-source/`, not the minified marketing page or the Electron renderer. No DeepSeek Git remote or submodule is needed after cloning this repository. DeepSeek publishes the Harness as an MIT-licensed Cordis plugin tree. The downloaded desktop release is version `0.2.0-rc.2`, and its shell/runtime has been mapped back to the source with no unexplained first-party file differences; see `analysis/SUMMARY.md`.
 
 The recommended integration boundary is the subprocess JSON-RPC SDK. It keeps Harness session lifecycle, tools, plugins, and persistence intact while your other harness remains the supervisor. Profile patches are the next layer for replacing providers, tools, policy, storage, or UI pieces. Directly importing internal packages is possible, but these APIs are still pre-stable and tightly coupled across the workspace.
 
@@ -89,13 +89,12 @@ Read `upstream-source/docs/architecture.md` before changing package behavior and
 The pinned toolchain is Node.js `^22.19 || >=24` and pnpm `11.7.0`:
 
 ```sh
+node scripts/build-vendored-source.mjs
 cd upstream-source
-pnpm install --frozen-lockfile
-pnpm run build:official
 pnpm dsh --help
 ```
 
-The official build profile embeds the public version, title, and source commit. Client CSS-module tokens are path-derived, so release-machine and local builds can differ in those tokens while their readable source and behavior remain identical.
+The wrapper supplies the original seven-character source commit because the vendored directory intentionally has no nested Git metadata. The official build profile embeds the public version, title, and source commit. Client CSS-module tokens are path-derived, so release-machine and local builds can differ in those tokens while their readable source and behavior remain identical.
 
 Focused SDK verification:
 

@@ -14,6 +14,7 @@ const resourcesRoot = join(appRoot, 'Contents', 'Resources')
 const extractedRoot = join(projectRoot, 'deobfuscated', 'app-asar')
 const packagedScope = join(extractedRoot, 'dsh', 'node_modules', '@deepseek-ai')
 const analysisRoot = join(projectRoot, 'analysis')
+const sourceProvenancePath = join(projectRoot, 'SOURCE_PROVENANCE.json')
 
 const ignoredScanDirectories = new Set([
   '.git', '.cache', 'artifacts', 'dist', 'lib', 'node_modules', 'target',
@@ -454,11 +455,12 @@ async function main() {
   const dmgPath = join(projectRoot, 'original', 'distribution', 'deepseek-harness-latest-macos-arm64.dmg')
   const feedPath = join(projectRoot, 'original', 'distribution', 'nightly-mac.yml')
   const asarPath = join(resourcesRoot, 'app.asar')
-  const sourceCommit = command('git', ['-C', sourceRoot, 'rev-parse', 'HEAD'])
-  const sourceTag = command('git', ['-C', sourceRoot, 'describe', '--tags', '--exact-match'])
-  const sourceRemote = command('git', ['-C', sourceRoot, 'remote', 'get-url', 'origin'])
-  const libreOfficeCommit = command('git', ['-C', libreOfficeSourceRoot, 'rev-parse', 'HEAD'])
-  const libreOfficeRemote = command('git', ['-C', libreOfficeSourceRoot, 'remote', 'get-url', 'origin'])
+  const sourceProvenance = JSON.parse(await readFile(sourceProvenancePath, 'utf8'))
+  const sourceCommit = sourceProvenance.deepseekHarness.commit
+  const sourceTag = sourceProvenance.deepseekHarness.tag
+  const sourceRemote = sourceProvenance.deepseekHarness.remote
+  const libreOfficeCommit = sourceProvenance.libreOfficeKit.commit
+  const libreOfficeRemote = sourceProvenance.libreOfficeKit.remote
   const packagedSidebar = await readFile(join(
     packagedScope, 'dsh-client-ui-sidebar', 'lib', 'client.js',
   ), 'utf8')
