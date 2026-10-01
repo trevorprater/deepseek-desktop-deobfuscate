@@ -8,6 +8,15 @@ This repository vendors the complete DeepSeek Harness `0.2.0-rc.2` source, its c
 
 Give your coding agent [`ui-reference/HANDOFF.md`](ui-reference/HANDOFF.md) and the `ui-reference/` directory. The handoff specifies the porting sequence, states, and acceptance criteria.
 
+To clone only the standalone UI instead of the full source/audit archive:
+
+```sh
+git clone --depth 1 --filter=blob:none --sparse \
+  https://github.com/trevorprater/deepseek-desktop-deobfuscate.git
+cd deepseek-desktop-deobfuscate
+git sparse-checkout set ui-reference
+```
+
 ![Standalone UI reference](ui-reference/screenshots/running.png)
 
 Start with [INTEGRATION.md](INTEGRATION.md) to use Harness from another agent system. The strongest distribution-to-source evidence is in [analysis/SUMMARY.md](analysis/SUMMARY.md); the complete per-file audit is in `analysis/runtime-map.json`.

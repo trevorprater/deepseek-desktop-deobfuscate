@@ -6,6 +6,15 @@ The goal is to give another coding agent a small, legible React application that
 
 ![Running state](screenshots/running.png)
 
+Clone only this package:
+
+```sh
+git clone --depth 1 --filter=blob:none --sparse \
+  https://github.com/trevorprater/deepseek-desktop-deobfuscate.git
+cd deepseek-desktop-deobfuscate
+git sparse-checkout set ui-reference
+```
+
 ## Run it
 
 ```sh
